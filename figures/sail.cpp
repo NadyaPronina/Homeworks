@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cmath>
 
-bool inPolygon(double* xp, double* yp, float x, float y, int countSide) {
-    //êîëè÷åñòâî ïåðåñå÷åíèé ñ ëó÷îì âëåâî
+bool inPolygon(double* xp, double* yp, float x, float y, int countSide) {  
+    //the same as in star.cpp
     int cnt = 0;
     for (int i = 0, j = countSide - 1; i < countSide; j = i++) {
         if ((((yp[i] <= y) && (y < yp[j])) || ((yp[j] <= y) && (y < yp[i]))) &&
