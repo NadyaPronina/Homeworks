@@ -2,7 +2,7 @@
 #include <cmath>
 
 bool inPolygon(double* xp, double* yp, float x, float y, int countSide) {
-    //количество пересечений с лучом влево
+    //ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГҐГ°ГҐГ±ГҐГ·ГҐГ­ГЁГ© Г± Г«ГіГ·Г®Г¬ ГўГ«ГҐГўГ®
     int cnt = 0;
     for (int i = 0, j = countSide - 1; i < countSide; j = i++) {
         if ((((yp[i] <= y) && (y < yp[j])) || ((yp[j] <= y) && (y < yp[i]))) &&
