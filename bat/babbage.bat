@@ -22,3 +22,4 @@ if %ost% equ 696 (goto end696) else (goto begin1)
 
 :end696
 echo %i% the end is 696 = %pow%
+
