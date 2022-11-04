@@ -1,14 +1,10 @@
 int summation(int num){     //task 1
-  int s = 0;
-  for (int i = 1; i<= num; ++i){
-    s+=i;
-  }
-  return s;
+    return num * (num + 1) / 2;  //
 }
 
 
-#include <vector>           //task2 (not given))0))
-
+#include <vector>           //task2 (not given))0))   я нажала на след kata и мне дало такое задание, оказывается оно выкидывает рандомное, не найду его условие
+                           //есть подозрение, что смысла немного в +=0 ))
 using namespace std; 
 
 int count_sheep(vector<bool> arr) 
@@ -67,16 +63,19 @@ std::string even_or_odd(int number)
 }
 
 
-#include <string>       //reverse
+#include <string>       //redone
 using namespace std ; 
 
 string reverseString (string str )
 {
-  string str1 = "";
-  for(int i=str.size() - 1; i >= 0; --i){
-    str1.push_back(str[i]);
+char swapper;
+
+  for(int i=0; i < str.length()/2; ++i) {
+    swapper = str[i];
+    str[i] = str[str.length() - 1- i];
+    str[str.length() - 1- i] = swapper;
   }
-  return str1;
+  return str;
 }
 
 
@@ -113,52 +112,30 @@ int twice_as_old(int dad, int son) {    //twice as old
 
 std::string number_to_string(int num) {
   std::string str = "";
-  std::string str1 = "";
   int check;
+  char swapper;
+  char c;
+    
+  bool hasminus = false;
   if (num < 0){
-    str += "-";
+      hasminus = true;
     num *= (-1);
   }
+
   while(num > 0){
     check = num % 10;
-      switch(check){
-          case 0:
-            str1+="0";
-            break;
-          case 1:
-            str1+="1";
-            break;
-          case 2:
-            str1+="2";
-            break;
-          case 3:
-            str1+="3";
-            break;
-          case 4:
-            str1+="4";
-            break;
-          case 5:
-            str1+="5";
-          break;
-          case 6:
-            str1+="6";
-            break;
-          case 7:
-            str1+="7";
-            break;
-          case 8:
-            str1+="8";
-             break;
-           case 9:
-            str1+="9";
-             break;
-            default: break;}
-     num /= 10;
+    c = check + 48;
+    num /= 10;
+    str += c;
 }
-  
-  for(int i = str1.length()-1; i>=0; --i){
-    str += str1[i];
-  }
+    if(hasminus) str += '-';
+    
+    for(int i=0; i < str.length()/2; ++i) {
+        swapper = str[i];
+        str[i] = str[str.length() - 1- i];
+        str[str.length() - 1- i] = swapper;
+    }
+    std::cout << str << std::endl;
   return str;
 }
 
