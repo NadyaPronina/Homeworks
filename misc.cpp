@@ -22,7 +22,7 @@ int main() {
 
 	double a, b, c, D, x1, x2;
 
-	std::cout << "Ââåäèòå êîıôôèöèåíòû a,b,c: " << std::endl;
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã½Ã´Ã´Ã¨Ã¶Ã¨Ã¥Ã­Ã²Ã» a,b,c: " << std::endl;
 	std::cout << std::endl << "a = ";
 	std::cin >> a;
 	std::cout << std::endl << "b = ";
@@ -34,7 +34,7 @@ int main() {
 	D = b * b - 4 * a * c;
 
 	if (D < 0)
-		std::cout << "Óğàâíåíèå ğåøåíèé íå èìååò!" << std::endl;
+		std::cout << "Ã“Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã°Ã¥Ã¸Ã¥Ã­Ã¨Ã© Ã­Ã¥ Ã¨Ã¬Ã¥Ã¥Ã²!" << std::endl;
 	else if (D >= 0) {
 		x1 = (-b + sqrt(D)) / 2.0 * a;
 		std::cout << "x1 = " << x1 << std::endl;
@@ -52,21 +52,21 @@ int main() {
 
 	double insrad, outrad, x, y;
 
-	std::cout << "Ââåäèòå ğàçìåğ íàèáîëüøåãî ğàäèóñà: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã­Ã Ã¨Ã¡Ã®Ã«Ã¼Ã¸Ã¥Ã£Ã® Ã°Ã Ã¤Ã¨Ã³Ã±Ã : ";
 	std::cin >> outrad;
-	std::cout << "Ââåäèòå ğàçìåğ íàèìåíüøåãî ğàäèóñà: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã­Ã Ã¨Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã£Ã® Ã°Ã Ã¤Ã¨Ã³Ã±Ã : ";
 	std::cin >> insrad;
-	std::cout << "Ââåäèòå êîîğäèíàòó õ: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ Ãµ: ";
 	std::cin >> x;
-	std::cout << "Ââåäèòå êîîğäèíàòó y: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã®Ã°Ã¤Ã¨Ã­Ã Ã²Ã³ y: ";
 	std::cin >> y;
 
 	double diff = sqrt(x * x + y * y);
 
 	if (diff<outrad && diff>insrad)
-		std::cout << "Òî÷êà íàõîäèòñÿ ìåæäó äâóìÿ îêğóæíîñòÿìè" << std::endl;
+		std::cout << "Ã’Ã®Ã·ÃªÃ  Ã­Ã ÃµÃ®Ã¤Ã¨Ã²Ã±Ã¿ Ã¬Ã¥Ã¦Ã¤Ã³ Ã¤Ã¢Ã³Ã¬Ã¿ Ã®ÃªÃ°Ã³Ã¦Ã­Ã®Ã±Ã²Ã¿Ã¬Ã¨" << std::endl;
 	else
-		std::cout<< "Òî÷êà íå íàõîäèòñÿ ìåæäó äâóìÿ îêğóæíîñòÿìè" << std::endl;
+		std::cout<< "Ã’Ã®Ã·ÃªÃ  Ã­Ã¥ Ã­Ã ÃµÃ®Ã¤Ã¨Ã²Ã±Ã¿ Ã¬Ã¥Ã¦Ã¤Ã³ Ã¤Ã¢Ã³Ã¬Ã¿ Ã®ÃªÃ°Ã³Ã¦Ã­Ã®Ã±Ã²Ã¿Ã¬Ã¨" << std::endl;
 
 	return 0;
 
@@ -82,20 +82,20 @@ int main() {
 
 	double eps, x, S = 0.0, val=1.0;
 
-	std::cout << "Ââåäèòå õ (-1;1): ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ãµ (-1;1): ";
 	std::cin >> x;
-	std::cout << "Ââåäèòå eps: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ eps: ";
 	std::cin >> eps;
 	if (x < -1 || x>1) {
-		std::cout << "Ââåäèòå õ â íåîáõîäèìîì ïğîìåæóòêå (-1;1)";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ãµ Ã¢ Ã­Ã¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã®Ã¬ Ã¯Ã°Ã®Ã¬Ã¥Ã¦Ã³Ã²ÃªÃ¥ (-1;1)";
 		return -1;
 	}
 	while (abs(val) > eps) {
 		S += val;
 		val *= x;
 	}
-	std::cout << "Ñóììà = " << S << std::endl;
-	std::cout << "Ñğàâíåíèå: " << 1 / (1 - x) << std::endl;
+	std::cout << "Ã‘Ã³Ã¬Ã¬Ã  = " << S << std::endl;
+	std::cout << "Ã‘Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥: " << 1 / (1 - x) << std::endl;
 
 	return 0;
 }
@@ -108,15 +108,15 @@ int main() {
 
 	double a, b, c, d, x;
 
-	std::cout << "Ââåäèòå à:";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã :";
 	std::cin >> a;
-	std::cout << "Ââåäèòå b: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ b: ";
 	std::cin >> b;
-	std::cout << "Ââåäèòå c: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ c: ";
 	std::cin >> c;
-	std::cout << "Ââåäèòå d: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ d: ";
 	std::cin >> d;
-	std::cout << "Ââåäèòå x: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ x: ";
 	std::cin >> x;
 
 	std::cout << "y = " << (x - a) * (d - c) / (b - a) + c << std::endl;
@@ -132,7 +132,7 @@ bool heart(double x, double y) {
 }
 
 int main() {
-	for (int y = 20; y >= 0; —y) {
+	for (int y = 20; y >= 0; â€”y) {
 		for (int x = 0; x < 41; ++x) {
 			if (heart(-1.5 + 3. / 40. * (double)x, -1.5 + 3. / 20. * (double)y))
 				std::cout << "*";
@@ -149,22 +149,21 @@ int main() {
 /*
 int main() {
 	setlocale(LC_ALL, "rus");
-	int R, counter = 0;
-	std::cout << "Ââåäèòå öåëî÷èñëåííûé ğàäèóñ, ìåíüøèé 1ìëí: ";
+	int R, res = 0;
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ñ‡Ğ¸ÑĞ»ĞµĞ½Ğ½Ñ‹Ğ¹ Ñ€Ğ°Ğ´Ğ¸ÑƒÑ, Ğ¼ĞµĞ½ÑŒÑˆĞ¸Ğ¹ 1Ğ¼Ğ»Ğ½: ";
 	std::cin >> R;
-	std::cout << std::endl;
+	std::cout <<std::endl;
 
-	if (R > pow(10, 6))
+	if (R > 1000000)
 		return -1;
+	for (int i = 0; i <= R; ++i)
+		res += (int)sqrt(R * R - i * i);
+	res = 4 * res + 1;
 
-	for (int i = -R; i <= R; ++i)
-		for (int j = -R; j <= R; ++j) {
-			if (i * i + j * j <= R * R)
-				++counter;
-		}
-
-	std::cout << "Êîëè÷åñòâî òî÷åê âíóòğè è íà ãğàíèöå îêğóæíîñòè ğàâíî: " << counter << std::endl;
+	std::cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ñ‚Ğ¾Ñ‡ĞµĞº Ğ²Ğ½ÑƒÑ‚Ñ€Ğ¸ Ğ¸ Ğ½Ğ° Ğ³Ñ€Ğ°Ğ½Ğ¸Ñ†Ğµ Ğ¾ĞºÑ€ÑƒĞ¶Ğ½Ğ¾ÑÑ‚Ğ¸ Ñ€Ğ°Ğ²Ğ½Ğ¾: " << res << std::endl;
 	return 0;
+}
+
 
 }
 */
