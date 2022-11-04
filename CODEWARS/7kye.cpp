@@ -175,21 +175,21 @@ std::string get_middle(std::string input)
 }
 
 //Reverse words
-std::string reverse_words(std::string str)
-{
-  std::string rev;
-  std::string result;
-  for (int i = 0; i < str.length(); ++i){
-    if (str[i] != ' ')
-      rev = str[i] + rev;
-    else {
-      result += rev;
-      result += ' ';
-      rev = "";
+std::string reverse_words(std::string str){
+  int tmp = 0;
+  char c;
+  for (int i = 0; i < str.length() + 1; ++i) {     //если не +1, то пропускает последнее слово
+    if (str[i] == ' ' || i == str.length()) {
+      for (int k = tmp; k < (i + tmp) / 2; ++k) {  //как и в строке половинку
+        c = str[k];
+        str[k] = str[i + tmp - k - 1];  //без слов..
+        str[i + tmp - k - 1] = c;  //как и в строке смена
+      }
+      tmp = i + 1;
     }
   }
-  result += rev;
-  return result;
+  std::cout<<"str = "<<str<<std::endl;
+  return str;
 }
 
 //You're a square!
