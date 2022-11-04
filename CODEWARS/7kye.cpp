@@ -143,21 +143,19 @@ bool XO(const std::string& str)
 //Sum of two lowest positive integers
 #include <vector>
 
-long sumTwoSmallestNumbers(std::vector<int> numbers)
-{
-    long min = 99999999999999999;
-    long pmin = 99999999999999999;
-    for(unsigned long i = 0; i < numbers.size(); ++i) {
-        if ((numbers[i] < pmin) && (numbers[i] >= min)){
-          pmin = numbers[i];
-        }
-        if (numbers[i] < min) {
-          pmin = min;
-          min = numbers[i];
-        }
+long sumTwoSmallestNumbers(std::vector<int> numbers){
+    long min = numbers[0], pmin = numbers[1];
+    //min = (pmin<min)?pmin:min;
+    if(pmin<min) std::swap(min,pmin);
+    for(int i = 2; i < numbers.size(); ++i){
+      if(numbers[i] <= min) {
+        std::swap(min, pmin);
+        min = numbers[i];
+      }
+      else if(numbers[i] < pmin) 
+        pmin = numbers[i];
     }
-    
-    std::cout << min << ", " << pmin << std::endl;
+  std::cout<<pmin<<" min = "<<min<<std::endl;
     return min + pmin;
 }
 
@@ -197,8 +195,7 @@ std::string reverse_words(std::string str)
 //You're a square!
 bool is_square(int n)
 {
-  int result = 0;
   for(int i = 0; i < n / 2 + 1; ++i)
-    if(i * i == n) ++result;
-  return result;
+    if(i * i == n) return true;
+  return false;
 }
