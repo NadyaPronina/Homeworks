@@ -83,7 +83,7 @@ void printMatrix(int** matrix, int rows, int cols)
 
 double mysqrt(double x, double eps = 1e-6) {			//task4		
 	double z_n1 = 1.0, z_n = 0.0;
-	while (abs(z_n1 - z_n) > eps)
+	while (std::abs(z_n1 - z_n) > eps)
 	{
 		z_n = z_n1;
 		z_n1 = z_n - (z_n * z_n - x) / (2 * z_n);
@@ -104,7 +104,7 @@ void task5(int** arr, int rows, int cols, bool flag) {
 				++i;
 			}
 
-			for (j = k; j < rows - k + 1; ++j) {  //ïðàâàÿ âåðòèêàëü
+			for (j = k; j < rows - k + 1; ++j) {  //Ã¯Ã°Ã Ã¢Ã Ã¿ Ã¢Ã¥Ã°Ã²Ã¨ÃªÃ Ã«Ã¼
 				arr[j][cols - k] = ++idx;
 				++i;
 			}
@@ -172,16 +172,12 @@ void task6(int** arr, int rows, int cols ) {
 }
 
 void shiftArray(int* A, int n, int k){
-	int counter = 0;
-	while (k >= n)
-	{
-		k -= n;
-	}
-	while (counter < k)
-	{
+  	k %= n;
+   	if (k == 0)
+        	return;
+	while (counter < k) {
 		int tmp_1 = A[0];
-		for (int i = 0; i < n; ++i)
-		{
+		for (int i = 0; i < n; ++i) {
 			A[i] = A[i + 1];
 		}
 		A[n - 1] = tmp_1;
