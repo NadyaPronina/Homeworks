@@ -171,17 +171,34 @@ void task6(int** arr, int rows, int cols ) {
 		}
 }
 
-void shiftArray(int* A, int n, int k){
-  	k %= n;
-   	if (k == 0)
-        	return;
-	while (counter < k) {
-		int tmp_1 = A[0];
-		for (int i = 0; i < n; ++i) {
-			A[i] = A[i + 1];
+void shiftArray(int* A, int n, int k) {
+	k %= n;
+	if (k == 0)
+		return;
+	int tmp, j = 0;
+
+	for (int i = 0; i < n / 2; ++i) {
+		tmp = A[i];
+		A[i] = A[n - 1 - i];
+		A[n - 1 - i] = tmp;
+	}
+
+	for (int i = 0; i < n; ++i) {
+		if (i < (n - k)) {
+			if (i < ((n - k) / 2)) {
+				tmp = A[i];
+				A[i] = A[n - k - i - 1];
+				A[n - k - i - 1] = tmp;
+			}
 		}
-		A[n - 1] = tmp_1;
-		++counter;
+		else {
+			if (i + j< n - k / 2 + 1) {
+				tmp = A[n - k + j];
+				A[n - k + j] = A[n - j - 1];
+				A[n - j - 1] = tmp;
+				++j;
+			}
+		}
 	}
 	std::cout << "The result (task 7):\n";
 	for (int i = 0; i < n; ++i) {
